@@ -1,0 +1,35 @@
+#processType01{ padding:5rem 0rem;}
+
+#processType01 .step_title{margin: 0 auto;font-size: 2rem; padding: 0rem 1rem;border-left: 3px solid #7da37a;border-right: 3px solid #7da37a;width:80px;margin-bottom: 2rem;text-align: center;font-family: 'NanumSquare', sans-serif ;font-weight: 600;}   
+#processType01 h1{font-size: 3.4rem;font-weight: 600;text-align: center;}  
+#processType01 p{font-size: 1.6rem;line-height: 1.2em;margin-top: 1rem;text-align: center;font-family: 'NanumSquare', sans-serif ;font-weight: 600;}  
+
+
+
+
+#processType01 .step{text-align:center; display:;}
+#processType01 .step ul{display:; width:37%; text-align:center; margin:3.6rem auto 0;}
+#processType01 .step ul li{text-align:center;width: 100%;}
+
+
+#processType01 .step ul li div>p{font-size:1.8rem; margin-top:1rem;font-family: 'S-CoreDream-4Regular';margin-top: 0rem;margin-bottom: 3rem;}
+
+
+
+
+@media screen and (min-width:1200px){ 
+#processType01{padding: 16rem;}   
+#processType01 article{text-align: center;}   
+#processType01 .step_title{margin: 0 auto;font-size: 4rem; padding: 0rem 1rem;border-left: 3px solid #7da37a;border-right: 3px solid #7da37a;width:150px;margin-bottom: 4rem;font-family: 'NanumSquare', sans-serif ;font-weight: 600;}   
+#processType01 h1{font-size: 6rem;font-weight: 600;font-family: 'NanumSquare', sans-serif ;font-weight: 800;}  
+#processType01 p{font-size: 2.4rem;line-height: 1.2em;margin-top: 3rem;font-family: 'NanumSquare', sans-serif ;font-weight: 600;}  
+    
+    
+#processType01 .step{display:flex;transform: translateY(300px);opacity: 0;transition: 1s;}
+#processType01.on .step{transform: translateY(0px);opacity: 1;}     
+#processType01 .step ul{display:flex; width:auto;margin-top: 8rem;}
+#processType01 .step ul li{width: auto; margin: 0rem 3rem;}
+#processType01 .step ul li div>p{font-size:2.6rem; margin-top:1rem;margin-top: 4rem;}
+
+    
+}
