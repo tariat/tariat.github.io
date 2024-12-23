@@ -26,3 +26,21 @@
 #gnb li a:hover{background:none; color:#618f5e;border-bottom: 8px solid #618f5e;}
 .header .inner .toggle{display: none;}
 }
+
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+    iframe {
+        height: 1500px; /* 태블릿 */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    iframe {
+        height: 1500px; /* 모바일 */
+    }
+}
+
+.form-container {
+    width: 100%;
+    max-width: 1500px; /* 폼의 최대 너비 제한 */
+    margin: 0 auto; /* 중앙 정렬 */
+}
