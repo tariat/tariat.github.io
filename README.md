@@ -1,1 +1,0 @@
-# tariat.github.io
