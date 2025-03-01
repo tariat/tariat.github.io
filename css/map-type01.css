@@ -1,0 +1,20 @@
+
+
+#mapType01{text-align: center;padding: 5rem 0rem 0rem 0rem;}
+  
+#mapType01 p{margin: 0 auto;font-size:2rem; padding: 0rem 1rem;border-left: 3px solid #7da37a;border-right: 3px solid #7da37a;width:70px;margin-bottom: 2rem;font-family: 'NanumSquare', sans-serif ;font-weight: 600;} 
+#mapType01 h1{font-size: 3.4rem;font-weight: 800;margin-bottom: 4rem;font-family: 'NanumSquare', sans-serif ;}      
+.map{width: 100%;}
+
+@media screen and (min-width:1200px){
+    
+    
+    
+    
+#mapType01{padding: 13rem 0rem 0rem 0rem;}
+  
+#mapType01 p{font-size: 4rem; border-left: 3px solid #7da37a;border-right: 3px solid #7da37a;width:150px;} 
+#mapType01 h1{font-size: 6rem;letter-spacing: 0.6rem;} 
+
+
+}
