@@ -2,7 +2,7 @@
 .main01{background:url('/img/main_bg1.webp') 70% top no-repeat; background-size:cover; height:468px;}
 .main02{background:url('/img/main_bg2.webp') center top no-repeat; background-size:cover; height:468px;}
 .main03{background:url('/img/main_bg3.webp') center top no-repeat; background-size:cover; height:468px;}
-#maintext .title_box{margin-top: 16rem;margin-left: 0rem;}
+#maintext .title_box{margin-top: 10rem;margin-left: 0rem;}
 
 #maintext .text{width:auto;position: absolute;top: 21rem;left: 4rem;}
 #maintext .text>h1{color: black;display: inline-block;font-size: 4rem;font-weight: 600; font-family: 'NanumSquare', sans-serif ;line-height: 1.4em;}    
@@ -60,9 +60,9 @@
 .main01{height:890px;}
 .main02{height:890px;}
 .main03{height:890px;}
-#maintext .title_box{margin-top: 23rem;margin-left: 15rem;}
+#maintext .title_box{margin-top: 14rem;margin-left: 15rem;}
     
-#maintext .title_box>img{width:784px;}        
+#maintext .title_box>img{width:500px;}        
     
 #maintext .text{width:auto;position: absolute;top: 37rem;left: 23rem;}    
 #maintext .text>h1{font-size: 10rem; }    
