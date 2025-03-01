@@ -1,12 +1,9 @@
 /*floatMenu*/
 .floatMenu{
     width:40px; right:5%; bottom:20px; position:fixed; z-index:9999;
-    /* 사파리 호환성 개선 */
-    pointer-events: auto;
+    -webkit-position: fixed; /* iOS 지원 */
     transform: translateZ(0); /* 하드웨어 가속 활성화 */
     will-change: transform; /* 성능 최적화 */
-    -webkit-backface-visibility: hidden; /* 사파리 렌더링 개선 */
-    -webkit-transform-style: preserve-3d; /* 사파리 3D 렌더링 개선 */
 }
 .floatMenu{width:40px; right:5%; bottom:20px; position:fixed; z-index:9999;}
 .floatMenu div{text-align:center; width:40px; height:40px; margin-top:1rem; border-radius:20px; display:table;}
@@ -30,3 +27,14 @@
 .floatMenu .call img{width:auto;}
 .floatMenu .top img{width:auto;}
 }
+
+/* iOS 특정 미디어 쿼리 */
+@supports (-webkit-touch-callout: none) {
+    .floatMenu {
+      position: fixed !important;
+      width: 40px !important;
+      height: auto !important;
+      right: 5% !important;
+      bottom: 20px !important;
+    }
+  }
