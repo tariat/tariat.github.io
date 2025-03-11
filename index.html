@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 공유 url 변경부분 -->
+<meta property="og:image" content="http://xn--9i1bo7bv5t16cltp4sg.kr/theme/TYPE03/img/100.png">
+<meta property="og:title" content="디에스컴퍼니">
+<meta property="og:description" content="">
+<link rel="icon" href="http://xn--9i1bo7bv5t16cltp4sg.kr/theme/TYPE03/img/favi.ico" type="image/x-icon" sizes="16x16">
+
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>디에스컴퍼니</title>
+<link rel="stylesheet" href="theme/TYPE03/css/default.css?ver=2303229">
+<link rel="stylesheet" href="js/font-awesome/css/font-awesome.min.css?ver=2303229">
+<link rel="stylesheet" href="css/gallery.css">
+<!--[if lte IE 8]>
+<script src="http://xn--9i1bo7bv5t16cltp4sg.kr/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "http://xn--9i1bo7bv5t16cltp4sg.kr";
+var g5_bbs_url   = "http://xn--9i1bo7bv5t16cltp4sg.kr/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "";
+var g5_sca       = "";
+var g5_editor    = "";
+var g5_cookie_domain = "";
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+/>
+<link rel="stylesheet" href="theme/TYPE03/css/flation.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="theme/TYPE03/js/main.js"></script>
+ <script type="text/javascript" src="theme/TYPE03/js/common.js"></script>
+
+<link rel="stylesheet" href="theme/TYPE03/css/animate.css">
+<link rel="stylesheet" href="theme/TYPE03/css/swiper.min.css">
+<link rel="stylesheet" href="theme/TYPE03/css/layout.css">
+<link rel="stylesheet" href="theme/TYPE03/css/style.css">
+<script src="js/jquery-1.12.4.min.js?ver=2304171"></script>
+<script src="js/jquery-migrate-1.4.1.min.js?ver=2304171"></script>
+<script src="js/jquery.menu.js?ver=2304171"></script>
+<script src="js/common.js?ver=2304171"></script>
+<script src="js/wrest.js?ver=2304171"></script>
+<script src="js/placeholders.min.js?ver=2304171"></script>
+<script src="js/gallery.js"></script>
+</head>
+<body>
+<!-- 팝업레이어 시작 { -->
+<div id="hd_pop">
+    <h2>팝업레이어 알림</h2>
+
+<span class="sound_only">팝업레이어 알림이 없습니다.</span></div>
+
+<script>
+$(function() {
+    $(".hd_pops_reject").click(function() {
+        var id = $(this).attr('class').split(' ');
+        var ck_name = id[1];
+        var exp_time = parseInt(id[2]);
+        $("#"+id[1]).css("display", "none");
+        set_cookie(ck_name, 1, exp_time, g5_cookie_domain);
+    });
+    $('.hd_pops_close').click(function() {
+        var idb = $(this).attr('class').split(' ');
+        $('#'+idb[1]).css('display','none');
+    });
+    $("#hd").css("z-index", 1000);
+});
+</script>
+<!-- } 팝업레이어 끝 -->
+<div class="all_wrap">
+    <!-- pc 상단 메뉴 -->
+<nav id="header">
+  <div class="width">
+    <div class="head_menu" id="mild_head">
+      <div class="logo">
+        <a href="index.html" class="nomain"><img src="theme/TYPE03/img/logo.png" alt=""></a>
+        <a href="index.html" class="main"><img src="theme/TYPE03/img/wlogo.png" alt=""></a>
+      </div>
+      <ul class="main_menu dropmenu" id="mild_menu">
+                <li class="dept1">
+          <a href="index.html"  target="_self" class="">홈</a>
+        </li>
+              <li class="dept1">
+          <a href="index.html?bo_table=greeting"  target="_self" class="">인사말</a>
+        </li>
+              <li class="dept1">
+          <a href="index.html?bo_table=consult"  target="_self" class="">온라인상담</a>
+        </li>
+              <li class="dept1">
+          <a href="index.html?bo_table=gallery"  target="_self" class="">갤러리</a>
+        </li>
+            </ul>
+    </div>
+  </div>
+  <!-- <div class="menu_bg"></div> -->
+
+</nav>
+
+<!-- 모바일 메뉴 -->
+<div class="mobile_head">
+  <div class="mobile_logo">
+    <a href="index.html"><img src="theme/TYPE03/img/logo.png" alt=""></a>
+  </div>
+  <div class="mobile_btn">
+    <a href="javascript:" class="mobile_open">
+      <i class="ri-menu-3-line"></i>
+    </a>
+  </div>
+</div>
+<div class="mob_bg"></div>
+
+<div id="mobile_menu" class="mobile_menu">
+
+  <div class="mob_logo">
+    <a href="index.html"><img src="theme/TYPE03/img/logo.png" alt="" ></a>
+    <div class="m_lang_wrap">
+      <span class="mobile_close"><i class="ri-close-line"></i></span>
+    </div>
+  </div>
+
+  <div class="mob_menu">
+    
+         <a href="index.html"  target="_self" class="top_menu"
+      class="">홈</a>
+   
+  
+         <a href="index.html?bo_table=greeting"  target="_self" class="top_menu"
+      class="">인사말</a>
+   
+  
+         <a href="index.html?bo_table=consult"  target="_self" class="top_menu"
+      class="">온라인상담</a>
+   
+  
+         <a href="index.html?bo_table=gallery"  target="_self" class="top_menu"
+      class="">갤러리</a> 
+  
+  </div>
+</div>
+<div class="mob_bg"></div>
+
+<!-- 서브메뉴 -->
+
+
+<div class="quick_banner">
+	<div class="floating_menu">
+		<input type="checkbox" checked style='display: none;'>
+		<span class="floating_plus" style='display:none'>
+	    <i class="fa-solid fa-plus"></i>
+		</span>
+		<ul class="floating_nav">
+			
+			<li>
+				<a href="https://m.blog.naver.com/yim5933" target="_blank"><img src='theme/TYPE03/img/sns/blog.png' style='width:50px'></a>
+			</li>
+			<li>
+				<a href="https://m.blog.naver.com/cb120610" target="_blank"><img src='theme/TYPE03/img/sns/blog2.png' style='width:50px'></a>
+			</li>
+			
+			<li>
+				<a href="tel:010-5546-5933" target="_blank"><img src='theme/TYPE03/img/sns/call.png' style='width:50px'></a>
+			</li>
+			<li>
+				<a href="tel:010-8139-2344" target="_blank"><img src='theme/TYPE03/img/sns/call2.png' style='width:50px'></a>
+			</li>
+			
+		</ul>
+	</div>
+	<button type="button" id="top_btn">
+		<span>TOP</span>
+	</button>
+</div>
+
+<script>
+$(function() {
+		$("#top_btn").on("click", function() {
+				$("html, body").animate({scrollTop:0}, '500');
+				return false;
+		});
+});
+</script>
+
+<style media="screen">
+/* #header{background: rgba(0,0,0,0.3);}
+#header .head_menu .main_menu .dept1 > a{color: #fff;}
+#header .head_menu .logo .main{display: block;}
+#header .head_menu .logo .nomain{display: none;} */
+</style>
+
+<div id="index_main">
+  <section class="theme_visual pc">
+    <div class="ani-in Hfull">
+      <!-- 메인슬라이드 -->
+      <div class="swiper_visual ani delay1">
+        <div class="swiper-wrapper">
+          <!-- 1슬라이드 시작 -->
+          <div class="swiper-slide slide1" style="" data-value="http://xn--9i1bo7bv5t16cltp4sg.kr/theme/TYPE03/img/p_visual01.png">
+            <div class="maintext_box width" data-swiper-animation="fadeInup" data-duration=".6s">
+              <img src="theme/TYPE03/img/main.png" alt="" >
+            </div>
+          </div>
+          <!-- 1슬라이드 끝 -->
+          <!-- 3슬라이드 시작 -->
+          <div class="swiper-slide slide2" style="" data-value="http://xn--9i1bo7bv5t16cltp4sg.kr/theme/TYPE03/img/p_visual02.png">
+            <div class="maintext_box width" data-swiper-animation="fadeInup" data-duration=".6s">
+              <img src="theme/TYPE03/img/main.png" alt="" >
+            </div>
+          </div>
+          <!-- 3슬라이드 끝 -->
+          <!-- 3슬라이드 시작 -->
+          <div class="swiper-slide slide3" style="" data-value="http://xn--9i1bo7bv5t16cltp4sg.kr/theme/TYPE03/img/p_visual03.png">
+            <div class="maintext_box width" data-swiper-animation="fadeInup" data-duration=".6s">
+              <img src="theme/TYPE03/img/main.png" alt="" >
+            </div>
+          </div>
+          <!-- 3슬라이드 끝 -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="theme_visual mob">
+    <div class="ani-in Hfull">
+      <!-- 메인슬라이드 -->
+      <div class="swiper_visual ani delay1">
+        <div class="swiper-wrapper">
+          <!-- 1슬라이드 시작 -->
+          <div class="swiper-slide slide1" style="" data-value="http://xn--9i1bo7bv5t16cltp4sg.kr/theme/TYPE03/img/p_visual01.png">
+            <div class="maintext_box width" data-swiper-animation="fadeInup" data-duration=".6s">
+              <img src="theme/TYPE03/img/main.png" alt="" >
+            </div>
+          </div>
+          <!-- 1슬라이드 끝 -->
+          <!-- 3슬라이드 시작 -->
+          <div class="swiper-slide slide2" style="" data-value="http://xn--9i1bo7bv5t16cltp4sg.kr/theme/TYPE03/img/p_visual02.png">
+            <div class="maintext_box width" data-swiper-animation="fadeInup" data-duration=".6s">
+              <img src="theme/TYPE03/img/main.png" alt="" >
+            </div>
+          </div>
+          <!-- 3슬라이드 끝 -->
+          <!-- 3슬라이드 시작 -->
+          <div class="swiper-slide slide3" style="" data-value="http://xn--9i1bo7bv5t16cltp4sg.kr/theme/TYPE03/img/p_visual03.png">
+            <div class="maintext_box width" data-swiper-animation="fadeInup" data-duration=".6s">
+              <img src="theme/TYPE03/img/main.png" alt="" >
+            </div>
+          </div>
+          <!-- 3슬라이드 끝 -->
+          <!-- 3슬라이드 시작 -->
+          <div class="swiper-slide slide4" style="" data-value="http://xn--9i1bo7bv5t16cltp4sg.kr/theme/TYPE03/img/p_visual04.png">
+            <div class="maintext_box width" data-swiper-animation="fadeInup" data-duration=".6s">
+              <img src="theme/TYPE03/img/main.png" alt="" >
+            </div>
+          </div>
+          <!-- 3슬라이드 끝 -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="main1">
+    <div class="width">
+      <div class="box_wrap">
+        <a href="index.html?bo_table=greeting">
+          <span class="img"><img src="theme/TYPE03/img/img1.png" alt=""></span>
+          <span class="text">
+            <div class="text_border">
+              <span class="h2">인사말</span>
+              <span class="h3">Introduction</span>
+              <span class="more">More >></span>
+            </div>
+          </span>
+        </a>
+        <a href="index.html?bo_table=consult">
+          <span class="img"><img src="theme/TYPE03/img/img2.png" alt=""></span>
+          <span class="text">
+            <div class="text_border">
+              <span class="h2">온라인상담</span>
+              <span class="h3">Contect Us</span>
+              <span class="more">More >></span>
+            </div>
+          </span>
+        </a>
+        <a href="index.html?bo_table=gallery">
+          <span class="img"><img src="theme/TYPE03/img/img3.png" alt=""></span>
+          <span class="text">
+            <div class="text_border">
+              <span class="h2">갤러리</span>
+              <span class="h3">Gallery</span>
+              <span class="more">More >></span>
+            </div>
+          </span>
+        </a>
+        <a href="tel:010-5546-5933">
+          <span class="img"><img src="theme/TYPE03/img/img7.png" alt=""></span>
+          <span class="text">
+            <div class="text_border">
+              <span class="h2">디에스컴퍼니</span>
+              <span class="h3"><b>010-5546-5933</b></span>
+            </div>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main_map common">
+    <div class="width">
+    <!-- * 카카오맵 - 지도퍼가기 -->
+    <!-- 1. 지도 노드 -->
+    <div id="daumRoughmapContainer1734333349726" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+    <!--
+      2. 설치 스크립트
+      * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+    -->
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+    <!-- 3. 실행 스크립트 -->
+    <script charset="UTF-8">
+      new daum.roughmap.Lander({
+        "timestamp" : "1734333349726",
+        "key" : "2mieq",
+        "mapWidth" : "640",
+        "mapHeight" : "360"
+      }).render();
+    </script>
+
+        <div class="text">
+          <h2>CONTACT US</h2>
+          <ul>
+            <li><span>주소 :</span>서울 은평구 연서로3나길 12-7(역촌동)</li>
+            <li><span>업체명 :</span>디에스컴퍼니</li>
+          </ul>
+          <a href="https://naver.me/G6imBkYE" class="naver" target="_blank">네이버지도 바로가기 <span>></span></a>
+        </div>
+    </div>
+
+  <div class="width" style="margin-top:50px">
+    <!-- * 카카오맵 - 지도퍼가기 -->
+    <!-- 1. 지도 노드 -->
+    <div id="daumRoughmapContainer1734662406053" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+    <!--
+      2. 설치 스크립트
+      * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+    -->
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    </div>
+  </div>
+</div>
+
+<div id="galleryContainer" style="display: none;">
+  <div class="board_title wow fadeInup animated" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInup;">
+    <h2 class="fw500">갤러리</h2>
+  </div>
+  <div class="gallery-grid" id="galleryGrid">
+      <!-- 갤러리 이미지가 동적으로 추가될 영역 -->
+  </div>
+</div>
+<div id="consult" style="display: none;">
+  <div class="board_title wow fadeInup animated" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInup;">
+    <h2 class="fw500">온라인 상담</h2>
+  </div>
+  <div class="form-container form" style="height:1500px">
+    <iframe src="https://naver.me/GHvHAAHe"
+            width="100%"             
+            height="100%"         
+            frameborder="0" 
+            scrolling="no"
+            title="제일현관문 상담 문의">
+    </iframe>
+  </div>
+</div>
+</div>
+
+<div id="greeting" style="display: none;">
+  <div class="board_title wow fadeInup animated" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInup;">
+    <h2 class="fw500">인사말</h2>
+  </div>
+  <div class="common page1">
+    <div class="width">
+      <img src="http://xn--9i1bo7bv5t16cltp4sg.kr/theme/TYPE03/img/img5.png" alt="">
+      <div class="text">
+        <h2>[디에스컴퍼니]</h2>
+        <br>
+        <p>디에스 컴퍼니 대표 임대성입니다. 
+          <br><br>
+          저는 20대부터 건설공사현장 막내생활을 시작으로 
+  15년 이상의 기술 노하우를 가지고 제 이름 영문 약자를 따서 
+  저희 회사를 설립하게 되었습니다. 
+          <br><br>
+          시공현장에 직원들만 돌리는 시스템이 아닌 제가 직접 방문하여 
+  견적 및 직접시공의 원칙이 저의 한결같은 철칙이며, 
+  고객님께서 만족하실때까지 
+  최선을 다해 제 집안일처럼 성실히 현장에 임하고 있습니다.
+          <br><br>
+          이유불문하고 모든 일은 기초에서부터 제대로 다듬어야 
+  향후 만족스러운 결과가 나오는 것이 분명합니다.   
+          <br><br>
+          오랜 현장경험을 바탕으로 시공을 하고 있으며 
+  합리적인 비용과 사후관리 까지 책임시공하는 디에스 컴퍼니입니다. 
+          <br><br>
+          최고의 퀼리티와 최고의 서비스로 보답드리며 
+  제 이름처럼 대성하는 회사가 되기 위하여 
+  끊임없이 노력하고 정진할 것을 약속 드립니다.
+          <br><br>
+          많은 관심과 성원 부탁드립니다. 감사합니다. 
+          <br><br>
+          문의메일 hyaksh1@nate.com
+
+      </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- </div> -->
+<!-- all_wrap 끝 -->
+
+<!-- 하단 시작 { -->
+<div id="ft">
+
+  <div class="footer width">
+    <a href="index.html" class="foot_logo"><img src="theme/TYPE03/img/flogo.png" alt=""></a>
+    <div class="foot_info_wrap">
+      <div class="foot_info">
+        <p>상호명 : 디에스컴퍼니</p>
+        <span>|</span>
+        <p>주소 : 서울 은평구 연서로3나길 12-7(역촌동)</p>
+        <span>|</span>
+        <p>사업자번호 : 135-65-00208</p>
+        <span>|</span>
+        <p>대표 : 임대성</p>
+        <span>|</span>
+        <p>대표번호 : 010-5546-5933</p>
+      </div>
+      <div class="copyright">
+        <span>COPYRIGHT 2024 . ALL RESERVED</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- } 하단 끝 -->
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+Fancybox.bind('[data-fancybox="gallery"]', {
+dragToClose: false,
+
+Toolbar: false,
+closeButton: "top",
+
+Image: {
+  zoom: false,
+},
+
+on: {
+  initCarousel: (fancybox) => {
+    const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+
+    fancybox.$container.style.setProperty(
+      "--bg-image",
+      `url("${slide.$thumb.src}")`
+    );
+  },
+  "Carousel.change": (fancybox, carousel, to, from) => {
+    const slide = carousel.slides[to];
+
+    fancybox.$container.style.setProperty(
+      "--bg-image",
+      `url("${slide.$thumb.src}")`
+    );
+  },
+},
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="theme/TYPE03/js/swiper-animation.min.js"></script>
+<script src="theme/TYPE03/js/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+
+</body>
+</html>
