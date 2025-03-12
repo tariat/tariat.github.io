@@ -12,24 +12,12 @@
 <meta http-equiv="imagetoolbar" content="no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>디에스컴퍼니</title>
-<link rel="stylesheet" href="theme/TYPE03/css/default.css?ver=2303229">
-<link rel="stylesheet" href="js/font-awesome/css/font-awesome.min.css?ver=2303229">
+<link rel="stylesheet" href="theme/TYPE03/css/default.css">
+<link rel="stylesheet" href="js/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/gallery.css">
 <!--[if lte IE 8]>
 <script src="http://xn--9i1bo7bv5t16cltp4sg.kr/js/html5.js"></script>
 <![endif]-->
-<script>
-// 자바스크립트에서 사용하는 전역변수 선언
-var g5_url       = "http://xn--9i1bo7bv5t16cltp4sg.kr";
-var g5_bbs_url   = "http://xn--9i1bo7bv5t16cltp4sg.kr/bbs";
-var g5_is_member = "";
-var g5_is_admin  = "";
-var g5_is_mobile = "";
-var g5_bo_table  = "";
-var g5_sca       = "";
-var g5_editor    = "";
-var g5_cookie_domain = "";
-</script>
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
@@ -56,11 +44,11 @@ var g5_cookie_domain = "";
 <link rel="stylesheet" href="theme/TYPE03/css/layout.css">
 <link rel="stylesheet" href="theme/TYPE03/css/style.css">
 <script src="js/jquery-1.12.4.min.js?ver=2304171"></script>
-<script src="js/jquery-migrate-1.4.1.min.js?ver=2304171"></script>
+<script src="js/jquery-migrate-1.4.1.min.js"></script>
 <script src="js/jquery.menu.js?ver=2304171"></script>
 <script src="js/common.js?ver=2304171"></script>
 <script src="js/wrest.js?ver=2304171"></script>
-<script src="js/placeholders.min.js?ver=2304171"></script>
+<script src="js/placeholders.min.js"></script>
 <script src="js/gallery.js"></script>
 </head>
 <body>
@@ -101,13 +89,13 @@ $(function() {
           <a href="index.html"  target="_self" class="">홈</a>
         </li>
               <li class="dept1">
-          <a href="index.html?bo_table=greeting"  target="_self" class="">인사말</a>
+          <a href="index.html?page=greeting"  target="_self" class="">인사말</a>
         </li>
               <li class="dept1">
-          <a href="index.html?bo_table=consult"  target="_self" class="">온라인상담</a>
+          <a href="index.html?page=consult"  target="_self" class="">온라인상담</a>
         </li>
               <li class="dept1">
-          <a href="index.html?bo_table=gallery"  target="_self" class="">갤러리</a>
+          <a href="index.html?page=gallery"  target="_self" class="">갤러리</a>
         </li>
             </ul>
     </div>
@@ -144,15 +132,15 @@ $(function() {
       class="">홈</a>
    
   
-         <a href="index.html?bo_table=greeting"  target="_self" class="top_menu"
+         <a href="index.html?page=greeting"  target="_self" class="top_menu"
       class="">인사말</a>
    
   
-         <a href="index.html?bo_table=consult"  target="_self" class="top_menu"
+         <a href="index.html?page=consult"  target="_self" class="top_menu"
       class="">온라인상담</a>
    
   
-         <a href="index.html?bo_table=gallery"  target="_self" class="top_menu"
+         <a href="index.html?page=gallery"  target="_self" class="top_menu"
       class="">갤러리</a> 
   
   </div>
@@ -207,7 +195,7 @@ $(function() {
 #header .head_menu .logo .nomain{display: none;} */
 </style>
 
-<div id="index_main">
+<div id="index_main" style="display: none;">
   <section class="theme_visual pc">
     <div class="ani-in Hfull">
       <!-- 메인슬라이드 -->
@@ -279,7 +267,7 @@ $(function() {
   <div class="main1">
     <div class="width">
       <div class="box_wrap">
-        <a href="index.html?bo_table=greeting">
+        <a href="index.html?page=greeting">
           <span class="img"><img src="theme/TYPE03/img/img1.png" alt=""></span>
           <span class="text">
             <div class="text_border">
@@ -289,7 +277,7 @@ $(function() {
             </div>
           </span>
         </a>
-        <a href="index.html?bo_table=consult">
+        <a href="index.html?page=consult">
           <span class="img"><img src="theme/TYPE03/img/img2.png" alt=""></span>
           <span class="text">
             <div class="text_border">
@@ -299,7 +287,7 @@ $(function() {
             </div>
           </span>
         </a>
-        <a href="index.html?bo_table=gallery">
+        <a href="index.html?page=gallery">
           <span class="img"><img src="theme/TYPE03/img/img3.png" alt=""></span>
           <span class="text">
             <div class="text_border">
@@ -368,14 +356,33 @@ $(function() {
   </div>
 </div>
 
-<div id="galleryContainer" style="display: none;">
+<!-- <div id="galleryContainer" style="display: none;">
   <div class="board_title wow fadeInup animated" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInup;">
     <h2 class="fw500">갤러리</h2>
   </div>
   <div class="gallery-grid" id="galleryGrid">
-      <!-- 갤러리 이미지가 동적으로 추가될 영역 -->
+       갤러리 이미지가 동적으로 추가될 영역
+  </div>
+</div> -->
+
+<div id="galleryContainer" style="display: none;">
+  <div class="board_title wow fadeInup animated" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInup;">
+    <h2 class="fw500">갤러리</h2>
+  </div>
+      <ul id="gall_ul" class="gall_row gall_ul">
+        <li class="gall_li col-gn-4">
+            <div class="gall_box">
+                <div class="gal-grid" id="galGrid">
+                <!-- 갤러리 이미지가 동적으로 추가될 영역 -->
+                 </div>
+             </div>
+          </li>
+      </ul>
   </div>
 </div>
+
+
+
 <div id="consult" style="display: none;">
   <div class="board_title wow fadeInup animated" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInup;">
     <h2 class="fw500">온라인 상담</h2>
@@ -489,37 +496,6 @@ $(function() {
 </script>
 <![endif]-->
 
-<script type="text/javascript">
-Fancybox.bind('[data-fancybox="gallery"]', {
-dragToClose: false,
-
-Toolbar: false,
-closeButton: "top",
-
-Image: {
-  zoom: false,
-},
-
-on: {
-  initCarousel: (fancybox) => {
-    const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
-
-    fancybox.$container.style.setProperty(
-      "--bg-image",
-      `url("${slide.$thumb.src}")`
-    );
-  },
-  "Carousel.change": (fancybox, carousel, to, from) => {
-    const slide = carousel.slides[to];
-
-    fancybox.$container.style.setProperty(
-      "--bg-image",
-      `url("${slide.$thumb.src}")`
-    );
-  },
-},
-});
-</script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="theme/TYPE03/js/swiper-animation.min.js"></script>
