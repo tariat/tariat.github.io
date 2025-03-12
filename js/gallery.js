@@ -66,20 +66,17 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("galleryContainer").style.display = "none"; // 갤러리 표시
         document.querySelector("#greeting").style.display = "block"; // 기존 메인 콘텐츠 숨기기기기
         document.getElementById("consult").style.display = "none"; // 기존 메인 콘텐츠 숨기기기기
-        renderGallery();
     }  else if (getBoTableValue() === "consult") {
         // document.querySelector(".all_wrap").style.display = "none"; // 기존 메인 콘텐츠 숨기기
         document.querySelector("#index_main").style.display = "none"; // 기존 메인 콘텐츠 숨기기기기
         document.getElementById("galleryContainer").style.display = "none"; // 갤러리 표시
         document.querySelector("#greeting").style.display = "none"; // 기존 메인 콘텐츠 숨기기기기
         document.getElementById("consult").style.display = "block"; // 기존 메인 콘텐츠 숨기기기기
-        renderGallery();
     } else  {
         // document.querySelector(".all_wrap").style.display = "none"; // 기존 메인 콘텐츠 숨기기
         document.querySelector("#index_main").style.display = "block"; // 기존 메인 콘텐츠 숨기기기기
         document.getElementById("galleryContainer").style.display = "none"; // 갤러리 표시
         document.querySelector("#greeting").style.display = "none"; // 기존 메인 콘텐츠 숨기기기기
         document.getElementById("consult").style.display = "none"; // 기존 메인 콘텐츠 숨기기기기
-        renderGallery();
     }
 });
