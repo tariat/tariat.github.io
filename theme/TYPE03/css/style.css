@@ -112,10 +112,10 @@ background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 100%
 @media all and (max-width: 850px){
   
   .page1 .w2{margin-top: 50px; flex-direction: column;}
-  .Hfull .slide1{background: url('../img/mslide1.png')no-repeat; background-size: cover; background-position: center;}
-  .Hfull .slide2{background: url('../img/mslide2.png')no-repeat; background-size: cover; background-position: center}
-  .Hfull .slide3{background: url('../img/mslide3.png')no-repeat; background-size: cover; background-position: center}
-  .Hfull .slide4{background: url('../img/mslide4.png')no-repeat; background-size: cover; background-position: center}
+  .Hfull .slide1{background: url('img/mslide1.webp')no-repeat; background-size: cover; background-position: center;}
+  .Hfull .slide2{background: url('img/mslide2.webp')no-repeat; background-size: cover; background-position: center}
+  .Hfull .slide3{background: url('img/mslide3.webp')no-repeat; background-size: cover; background-position: center}
+  /* .Hfull .slide4{background: url('../img/mslide4.webp')no-repeat; background-size: cover; background-position: center} */
   .main_map .width{flex-direction: column;}
   .main_map .text{width: 100%;}
   .main_map .root_daum_roughmap{width: 100% !important;}
