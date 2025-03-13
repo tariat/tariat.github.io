@@ -89,9 +89,9 @@
 /* 메인비주얼 */
 .Hfull{height:calc(90vh - 100px); margin-top: 100px;}
 .Hfull .swiper_visual{height: 100%;}
-.Hfull .slide1{background: url('../img/slide1.png')no-repeat; background-size: cover; background-position: center;}
-.Hfull .slide2{background: url('../img/slide2.png')no-repeat; background-size: cover; background-position: center;}
-.Hfull .slide3{background: url('../img/slide3.png')no-repeat; background-size: cover; background-position: center;}
+.Hfull .slide1{background: url('img/slide1.webp')no-repeat; background-size: cover; background-position: center;}
+.Hfull .slide2{background: url('img/slide2.webp')no-repeat; background-size: cover; background-position: center;}
+/* .Hfull .slide3{background: url('../img/slide3.png')no-repeat; background-size: cover; background-position: center;} */
 
 .Gfull .swiper_visual{height: 100%;}
 /* 기본 스타일 */
