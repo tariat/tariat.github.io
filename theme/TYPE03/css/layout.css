@@ -256,10 +256,10 @@
 .floating_menu > .floating_nav li a i { font-size: 20px; color: #222; }
 .floating_menu > .floating_nav li a i.xi-kakaotalk { font-size: 28px; margin-top: 3px; }
 
-.pg_wrap{margin-top: 60px; display: flex; justify-content: center; width: 100%;}
-.pg_wrap .pg{display: flex;}
+.pg_wrap{margin-top: 20px;margin-bottom: 20px; display: flex; justify-content: center; width: 100%;}
+.pg_wrap .pg{display: flex; flex-wrap: wrap;}
 .pg_page{width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin: 0 2px; background-color: none; border: 1px solid #ccc;}
-.pg_current{border: 1px solid #8e8e8e; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin: 0 2px; background: none;}
+.pg_current{border: 1px solid #8e8e8e; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin: 0 2px; background: #000;}
 
 @media all and (max-width: 1400px) {
 	/* html{font-size: 55% !important;} */

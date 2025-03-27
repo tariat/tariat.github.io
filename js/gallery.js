@@ -5,53 +5,73 @@ document.addEventListener("DOMContentLoaded", function () {
         return urlParams.get('page');
     }
 
-    // 샘플 이미지 (나중에 서버에서 가져올 경우 AJAX 사용 가능)
-    const sampleImages = [
-        "img/waterproofing-construction-1.webp",
-        "img/waterproofing-construction-2.webp",
-        "img/waterproofing-construction-3.webp",
-        "img/waterproofing-construction-4.webp",
-        "img/waterproofing-construction-5.webp",
-        "img/waterproofing-construction-6.webp",
-        "img/waterproofing-construction-7.webp",
-        "img/waterproofing-construction-8.webp",
-        "img/waterproofing-construction-9.webp",
-        "img/waterproofing-construction-10.webp",
-        "img/waterproofing-construction-12.webp",
-        "img/waterproofing-construction-13.webp",
-        "img/waterproofing-construction-14.webp",
-        "img/waterproofing-construction-15.webp",
-        "img/waterproofing-construction-16.webp",
-        "img/waterproofing-construction-17.webp",
-        "img/waterproofing-construction-18.webp",
-        "img/waterproofing-construction-19.webp",
-        "img/waterproofing-construction-20.webp",
-        "img/waterproofing-construction-21.webp",
-        "img/waterproofing-construction-22.webp",
-        "img/waterproofing-construction-23.webp",
-        "img/waterproofing-construction-24.webp",
-        "img/waterproofing-construction-25.webp",
-        "img/waterproofing-construction-26.webp",
-        "img/waterproofing-construction-27.webp",
-        "img/waterproofing-construction-28.webp",
-        "img/waterproofing-construction-29.webp",
-        "img/waterproofing-construction-30.webp",
-        "img/waterproofing-construction-31.webp"
-      ];
+    const sampleImages = [];
+    for (let i = 1; i <= 113; i++) {
+        sampleImages.push(`img/waterproofing-construction-${i}.webp`);
+    }
+
+    const imagesPerPage = 6;
+    let currentPage = 1;
+    const totalPages = Math.ceil(sampleImages.length / imagesPerPage);
 
     // bo_table이 gallery라면 실행
     if (getBoTableValue() === "gallery") {
         // 갤러리 생성 함수
         function renderGallery() {
             let galleryHtml = "";
-            sampleImages.forEach((imgUrl, index) => {
+            const startIndex = (currentPage - 1) * imagesPerPage;
+            const endIndex = Math.min(startIndex + imagesPerPage, sampleImages.length);
+            for (let i = startIndex; i < endIndex; i++) {
                 galleryHtml += `
                     <div class="gal-item">
-                        <img src="${imgUrl}" alt="방수공사-사례-${index + 1}">
+                        <img src="${sampleImages[i]}" alt="방수공사-사례-${i + 1}">
                     </div>
                 `;
-            });
+            }
             document.getElementById("galGrid").innerHTML = galleryHtml;
+            renderPagination();
+        }
+
+        function renderPagination() {
+            let paginationHtml = '<div class="pg_wrap"><div class="pg">';
+
+            // // First and Previous buttons
+            // if (currentPage > 1) {
+            //     paginationHtml += `<a href="#" class="pg_start" data-page="1">처음</a>`;
+            //     paginationHtml += '<a href="#" class="pg_prev" data-page="${currentPage - 1}"></a>';
+            // } else {
+            //     paginationHtml += `<span class="pg_start">처음</span>`;
+            //     paginationHtml += '<span class="pg_prev">이전</span>';
+            // }
+
+            // Page numbers
+            for (let page = 1; page <= totalPages; page++) {
+                if (page === currentPage) {
+                    paginationHtml += `<span class="pg_current">${page}</span>`;
+                } else {
+                    paginationHtml += `<a href="#" class="pg_page" data-page="${page}">${page}</a>`;
+                }
+            }
+
+            // // Next and End buttons
+            // if (currentPage < totalPages) {
+            //     paginationHtml += `<a href="#" class="pg_next" data-page="${currentPage + 1}">다음</a>`;
+            //     paginationHtml += `<a href="#" class="pg_end" data-page="${totalPages}">끝</a>`;
+            // } else {
+            //     paginationHtml += `<span class="pg_next">다음</span>`;
+            //     paginationHtml += `<span class="pg_end">끝</span>`;
+            // }
+
+            paginationHtml += '</div></div>';
+            document.getElementById("paginationContainer").innerHTML = paginationHtml;
+            const pageLinks = document.querySelectorAll("#paginationContainer a");
+            pageLinks.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    currentPage = parseInt(this.getAttribute("data-page"));
+                    renderGallery();
+                });
+            });
         }
 
         // document.querySelector(".all_wrap").style.display = "none"; // 기존 메인 콘텐츠 숨기기
