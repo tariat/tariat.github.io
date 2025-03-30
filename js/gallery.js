@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const sampleImages = [];
-    for (let i = 1; i <= 109; i++) {
+    for (let i = 1; i <= 105; i++) {
         sampleImages.push(`img/waterproofing-construction-${i}.webp`);
     }
 
