@@ -1,0 +1,8 @@
+autils.py
+config.json
+/__pycache__
+/__MACOSX
+/venv
+/notebook
+/Archive
+/.DS_store
