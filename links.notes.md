@@ -1,5 +1,10 @@
 # links.json 슬러그 ↔ 네이버 포스팅 매핑
 
+6/29
+- https://tariat.github.io?id=galaxy-book-6-pro&src=naver
+
+
+
 > links.json은 순수 JSON이라 주석을 못 넣어(리다이렉트가 JSON.parse로 읽음) 여기에 정리.
 > 각 slug를 글에 넣을 때 URL: `https://tariat.github.io/?id=<slug>&src=naver`
 
